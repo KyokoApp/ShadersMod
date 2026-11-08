@@ -1,0 +1,189 @@
+{
+  "version": 4,
+  "name": "MCPE Bedrock Style Layout",
+  "mControlDataList": [
+    {
+      "name": "\u25b2",
+      "keycodes": [
+        87
+      ],
+      "type": "button",
+      "x": 65.0,
+      "y": 140.0,
+      "width": 55.0,
+      "height": 55.0,
+      "strokeWidth": 2.0,
+      "dynamicX": "0.05",
+      "dynamicY": "0.62"
+    },
+    {
+      "name": "\u25bc",
+      "keycodes": [
+        83
+      ],
+      "type": "button",
+      "x": 65.0,
+      "y": 260.0,
+      "width": 55.0,
+      "height": 55.0,
+      "strokeWidth": 2.0,
+      "dynamicX": "0.05",
+      "dynamicY": "0.82"
+    },
+    {
+      "name": "\u25c0",
+      "keycodes": [
+        65
+      ],
+      "type": "button",
+      "x": 5.0,
+      "y": 200.0,
+      "width": 55.0,
+      "height": 55.0,
+      "strokeWidth": 2.0,
+      "dynamicX": "0.01",
+      "dynamicY": "0.72"
+    },
+    {
+      "name": "\u25b6",
+      "keycodes": [
+        68
+      ],
+      "type": "button",
+      "x": 125.0,
+      "y": 200.0,
+      "width": 55.0,
+      "height": 55.0,
+      "strokeWidth": 2.0,
+      "dynamicX": "0.09",
+      "dynamicY": "0.72"
+    },
+    {
+      "name": "\u25c6",
+      "keycodes": [
+        16
+      ],
+      "type": "button",
+      "isToggle": true,
+      "x": 65.0,
+      "y": 200.0,
+      "width": 55.0,
+      "height": 55.0,
+      "strokeWidth": 2.0,
+      "dynamicX": "0.05",
+      "dynamicY": "0.72"
+    },
+    {
+      "name": "JUMP",
+      "keycodes": [
+        32
+      ],
+      "type": "button",
+      "x": 300.0,
+      "y": 200.0,
+      "width": 65.0,
+      "height": 65.0,
+      "strokeWidth": 2.0,
+      "dynamicX": "0.91",
+      "dynamicY": "0.72"
+    },
+    {
+      "name": "HIT",
+      "keycodes": [
+        -100
+      ],
+      "type": "button",
+      "x": 240.0,
+      "y": 200.0,
+      "width": 55.0,
+      "height": 55.0,
+      "strokeWidth": 2.0,
+      "dynamicX": "0.84",
+      "dynamicY": "0.72"
+    },
+    {
+      "name": "USE",
+      "keycodes": [
+        -99
+      ],
+      "type": "button",
+      "x": 300.0,
+      "y": 130.0,
+      "width": 55.0,
+      "height": 55.0,
+      "strokeWidth": 2.0,
+      "dynamicX": "0.91",
+      "dynamicY": "0.58"
+    },
+    {
+      "name": "INV",
+      "keycodes": [
+        69
+      ],
+      "type": "button",
+      "x": 240.0,
+      "y": 130.0,
+      "width": 55.0,
+      "height": 55.0,
+      "strokeWidth": 2.0,
+      "dynamicX": "0.84",
+      "dynamicY": "0.58"
+    },
+    {
+      "name": "DROP",
+      "keycodes": [
+        81
+      ],
+      "type": "button",
+      "x": 200.0,
+      "y": 260.0,
+      "width": 50.0,
+      "height": 45.0,
+      "strokeWidth": 2.0,
+      "dynamicX": "0.78",
+      "dynamicY": "0.85"
+    },
+    {
+      "name": "PAUSE",
+      "keycodes": [
+        27
+      ],
+      "type": "button",
+      "x": 150.0,
+      "y": 10.0,
+      "width": 50.0,
+      "height": 35.0,
+      "strokeWidth": 2.0,
+      "dynamicX": "0.50",
+      "dynamicY": "0.02"
+    },
+    {
+      "name": "CHAT",
+      "keycodes": [
+        84
+      ],
+      "type": "button",
+      "x": 180.0,
+      "y": 10.0,
+      "width": 50.0,
+      "height": 35.0,
+      "strokeWidth": 2.0,
+      "dynamicX": "0.56",
+      "dynamicY": "0.02"
+    },
+    {
+      "name": "POV",
+      "keycodes": [
+        116
+      ],
+      "type": "button",
+      "x": 120.0,
+      "y": 10.0,
+      "width": 50.0,
+      "height": 35.0,
+      "strokeWidth": 2.0,
+      "dynamicX": "0.44",
+      "dynamicY": "0.02"
+    }
+  ]
+}
