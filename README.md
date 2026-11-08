@@ -1,26 +1,18 @@
-# ShadersMod & Culling Optimizer (MCPE / Helio G99)
+# ShadersMod & AI-SuperResolution (Helio G99 Mali-G57)
 
-Paket optimasi visual dan performa khusus untuk **Minecraft Bedrock (MagicLoader)** di chipset **MediaTek Helio G99 (GPU Mali-G57 MC2)**.
-
----
-
-## 🚀 1. Addon Culling Optimizer (Render Depan Kamera Saja)
-- **File**: `HelioG99-CullingOptimizer.mcpack`
-- **Download Langsung**: [Unduh HelioG99-CullingOptimizer.mcpack](https://raw.githubusercontent.com/KyokoApp/ShadersMod/main/HelioG99-CullingOptimizer.mcpack)
-- **Cara Kerja (Frustum & Occlusion Culling)**:
-  - Blok, pohon, partikel, dan mob yang berada **di belakang punggung pemain dipotong total (0% render)**.
-  - Gua bawah tanah yang tertutup dinding batu tebal tidak dihitung geometri bayangannya.
-  - **Efek**: GPU Mali-G57 hanya fokus merender apa yang tertangkap di layar HP kamu. FPS melonjak drastis tanpa menurunkan kualitas visual sedikit pun.
-- **Cara Pasang**:
-  - Download file `.mcpack` di atas.
-  - Klik/buka file tersebut menggunakan Minecraft Bedrock -> Otomatis terimport.
-  - Masuk ke **Settings** -> **Global Resources** -> Aktifkan `HelioG99 Camera Culling Optimizer`.
+Optimasi shaderpack Minecraft khusus **MagicLoader Bedrock** pada chipset **MediaTek Helio G99**.
 
 ---
 
-## 🌟 2. Shader BSL MaxTurbo (Frustum Culling Edition)
-- **File**: `BSL-60FPS-MaxTurbo.zip`
-- **Download Langsung**: [Unduh BSL-60FPS-MaxTurbo.zip](https://raw.githubusercontent.com/KyokoApp/ShadersMod/main/BSL-60FPS-MaxTurbo.zip)
-- **Kombinasi Sempurna**:
-  - Shader BSL sudah diinject flag `frustum.culling = true`, `shadow.culling = true`, dan `occlusion.culling = true`.
-  - Air realistis bergelombang, warna sinematik BSL, dan goyangan dedaunan tetap 100% utuh di depan pandangan mata.
+## ⚡ BSL Shaders - AI Turbo Edition (FSR Adaptive Reconstruction)
+- **File**: `BSL-AI-Turbo-HelioG99.zip`
+- **Download Langsung**: [Unduh BSL-AI-Turbo-HelioG99.zip](https://raw.githubusercontent.com/KyokoApp/ShadersMod/main/BSL-AI-Turbo-HelioG99.zip)
+
+### Cara Kerja Teknik Mirip AI (FSR 1.0 CAS Sharpening):
+1. **Pass-through Reconstruction (FSR CAS Sharpening Level 2)**:
+   - Diaktifkan langsung di pass akhir post-processing (`final.glsl`).
+   - Tepi blok, garis bayangan, ombak air, dan dedaunan dipertajam otomatis secara adaptif sesuai kontras layar.
+2. **Kombinasi Penghemat Beban GPU**:
+   - Jika resolusi layar HP atau render scale diturunkan sedikit (misal ke 80% di MagicLoader / setting resolusi), visual **tetap tampak tajam seperti 1080p native**, tetapi GPU Mali-G57 bekerja jauh lebih ringan sehingga framerate bisa melesat menuju 60 FPS.
+3. **Preservasi Efek 100%**:
+   - Bayangan lembut BSL, ombak air jernih dengan pantulan matahari, goyangan dedaunan, dan warna sinematik tetap 100% aktif utuh.
