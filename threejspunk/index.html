@@ -1,41 +1,21 @@
 <!doctype html>
 <html lang="en">
   <head>
-  <script>
-  // Transparent redirect interceptor untuk mencegah 404 dari subfolder GitHub Pages
-  (function() {
-    const originalFetch = window.fetch;
-    const baseHref = new URL("./", window.location.href).href;
-    window.fetch = function(url, options) {
-      if (typeof url === "string") {
-        if (url.startsWith("/libs/")) {
-          url = new URL("." + url, baseHref).href;
-        } else if (url.startsWith("/assets/")) {
-          url = new URL("." + url, baseHref).href;
-        } else if (url.startsWith("/maps/")) {
-          url = new URL("." + url, baseHref).href;
-        } else if (url.startsWith("/models/")) {
-          url = new URL("." + url, baseHref).href;
-        } else if (url.startsWith("/textures/")) {
-          url = new URL("." + url, baseHref).href;
-        } else if (url.startsWith("/audio/")) {
-          url = new URL("." + url, baseHref).href;
-        }
-      }
-      return originalFetch(url, options);
-    };
-  })();
-</script>
-    <meta charset="UTF-8" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXM57B70QM"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-VXM57B70QM');
+      // Transparent fetch interceptor for relative subfolder resolution
+      (function() {
+        const originalFetch = window.fetch;
+        const baseHref = new URL("./", window.location.href).href;
+        window.fetch = function(url, options) {
+          if (typeof url === "string" && url.startsWith("/") && !url.startsWith("//")) {
+            url = new URL("." + url, baseHref).href;
+          }
+          return originalFetch(url, options);
+        };
+      })();
     </script>
+
+    <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
@@ -169,15 +149,16 @@
         "keywords": "driving game, drift, cyberpunk, WebGPU, Three.js, TSL, Anderson Mancini, Sunag"
       }
     </script>
-    <script type="module" crossorigin src="./assets/index-H-uJ8qQR.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-JNxiaN8f.css?v=clean">
-    <!-- Eruda Dev Console for Mobile Debugging -->
-    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-    <script>eruda.init();</script>
+    <script type="module" crossorigin src="./assets/index-BdYCjkRC.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CmOknlDP.css">
   </head>
   <body>
     <noscript>
       Threejs-Punk Drive — a cyberpunk driving game in WebGPU and Three.js by Anderson Mancini and Sunag. Enable JavaScript to play.
     </noscript>
-  </body>
+  
+    <!-- Eruda Dev Console for Mobile Debugging -->
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
+</body>
 </html>
